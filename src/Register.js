@@ -39,6 +39,10 @@ const Register = () => {
   const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
+  const goToForm = () => {
+    window.open("https://forms.gle/1c4DcSNjSDaxaHzF7", "_blank");
+  };
+
   useEffect(() => {
     const userString = localStorage.getItem("user");
 
@@ -238,7 +242,10 @@ const Register = () => {
             Take 3 minutes to complete a survey! It would be beyond useful and
             appreciated by the development and design team!
           </p>
-          <button className="w-1/2 poppins-medium bg-orange-500 transition duration-500 ease-in-out text-white mt-4 lg:hover:bg-black lg:hover:text-white buttonHover px-3 py-2 rounded-full">
+          <button
+            onClick={goToForm}
+            className="w-1/2 poppins-medium bg-orange-500 transition duration-500 ease-in-out text-white mt-4 lg:hover:bg-black lg:hover:text-white buttonHover px-3 py-2 rounded-full"
+          >
             Take survey
           </button>
         </div>
